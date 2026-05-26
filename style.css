@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a; 
+  color: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: min(92vw, 800px);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: #94a3b8;
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+  margin: 0 auto 16px;
+  padding: 16px;
+  max-width: 800px;
+  text-align: left;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+.controls label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.controls input[type="range"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  cursor: pointer;
+}
+
+.controls span {
+  min-width: 4ch;
+  text-align: right;
+  color: #38bdf8;
+  font-variant-numeric: tabular-nums;
+  font-weight: bold;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  cursor: crosshair;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.wave-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #334155;
+}
+
+.wave-control-group label {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.wave-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.wave-actions input[type="range"] {
+  grid-column: 1;
+}
+
+#waveButton {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+#waveButton:hover {
+  background: #0369a1;
+}
+
+#waveButton:active {
+  background: #075985;
+  transform: scale(0.98);
+}

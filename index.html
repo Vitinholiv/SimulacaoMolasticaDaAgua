@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulação de Fluido</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Simulação de Fluido</h1>
+    <p class="subtitle">Usa uma lógica de molas para simular um comportamento que parece de um fluido. Clique para gerar bolinhas de tamanhos aleatórios. Também há um botão para gerar ondas no fluido.</p>
+    <section class="controls" aria-label="Controles da simulação">
+      <label>
+        Tensão
+        <input id="tension" type="range" min="0.001" max="0.1" step="0.001" value="0.025" />
+        <span id="tensionValue">0.025</span>
+      </label>
+      <label>
+        Amortecimento
+        <input id="damping" type="range" min="0" max="0.1" step="0.001" value="0.025" />
+        <span id="dampingValue">0.025</span>
+      </label>
+      <label>
+        Propagação
+        <input id="spread" type="range" min="0" max="0.5" step="0.01" value="0.25" />
+        <span id="spreadValue">0.25</span>
+      </label>
+      <div class="wave-control-group">
+        <label for="waveIntensity">Força da Onda</label>
+        <div class="wave-actions">
+          <input id="waveIntensity" type="range" min="100" max="1500" step="10" value="500" />
+          <button id="waveButton">Criar Onda</button>
+        </div>
+      </div>
+    </section>
+    <canvas id="canvas" width="800" height="400"></canvas>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
