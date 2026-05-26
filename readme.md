@@ -1,4 +1,4 @@
-# Simulação de Fluido (Baseado em Molas)
+# Simulação de Fluido
 
 Este projeto é uma simulação interativa de fluidos 2D construída com HTML5 Canvas, CSS e JavaScript.
 
